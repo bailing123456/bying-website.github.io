@@ -1,45 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Dynamic Website</title>
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>白灵的档案库</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        body {
+            perspective: 1px;
+            transform-style: preserve-3d;
+        }
+
+        .parallax {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            perspective: 1px;
+        }
+
+        .parallax video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: translateZ(-1px) scale(2);
+        }
+        .image-container a {
+            color: rgb(4, 129, 245);
+            text-decoration: none;
+            font-size: 2.00em; /* 设置五页字体大小 */
+        }
+        img {
+            margin: 10px; /* 上下左右各10px */
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            color: white;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        body {
+    background-image: url('f534a849e48e648ca6a450e1fafded7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+    </style>
 </head>
 
 <body>
-  <!-- 导航栏 -->
-  <nav>
-    <ul>
-      <li><a href="#" data-target="home">Home</a></li>
-      <li><a href="#" data-target="about">About</a></li>
-      <li><a href="#" data-target="services">Services</a></li>
-      <li><a href="#" data-target="contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- 内容区域 -->
-  <div id="content">
-    <div id="home" class="page">
-      <h2>Home Page</h2>
-      <p>Welcome to our dynamic website!</p>
+    <div class="parallax">
+        <video autoplay loop muted>
+            <source src="163727-15190294471b41.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
     </div>
-    <div id="about" class="page">
-      <h2>About Us</h2>
-      <p>We are a team dedicated to creating great experiences.</p>
+    <div class="content">
+        <h1>欢迎来到我的网站（点击蓝色字体访问内容）</h1>
+        <p><div class="image-container">
+            <img src="96caa83620a15bc5be9dd8b919e2133.jpg" alt="示例图片">
+            <div class="caption">
+                <a href="http://www.bilibi.com">哲学思考</a>
+            </div>
+            <img src="微信图片_20241103012442.jpg" alt="示例图片">
+            <div class="caption">
+                <a href="http://www.bilibi.com">计算机学</a>
+            </div>
+            <img src="78ef67d3daee97d3fc91dd5819a65f7.jpg" alt="示例图片">
+            <div class="caption">
+                <a href="http://www.bilibi.com">数学讨论</a>
+            </div>
+            <img src="313c659045fe09b0ecdc7e8a123ad13.jpg" alt="示例图片">
+            <div class="caption">
+                <a href="http://www.bilibi.com">物理学讨论</a>
+        </div></p>
     </div>
-    <div id="services" class="page">
-      <h2>Our Services</h2>
-      <p>We offer a wide range of services to meet your needs.</p>
-    </div>
-    <div id="contact" class="page">
-      <h2>Contact Us</b>
-      <p>You can reach us at <a href="mailto:contact@example.com">contact@example.com</a>.</p>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
 </body>
 
 </html>
