@@ -1,97 +1,93 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./font/iconfont.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>白灵的档案库</title>
-    <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow-x: hidden;
-        }
-
-        body {
-            perspective: 1px;
-            transform-style: preserve-3d;
-        }
-
-        .parallax {
-            position: relative;
-            height: 100vh;
-            overflow: hidden;
-            perspective: 1px;
-        }
-
-        .parallax video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transform: translateZ(-1px) scale(2);
-        }
-        .image-container a {
-            color: rgb(4, 129, 245);
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>白灵档案馆</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .shell{
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 3px;
+    }
+    .shell div{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: 30px;
+        letter-spacing: 2px;
+    }
+    .image{
+        transform: translateZ(-1px) scale(1.6);
+        background-size: cover;
+        height: 100vh;
+        z-index: -1;
+    }
+    .text{
+        height: 50vh;
+        background-color: #fff;
+    }
+    .text h1{
+        color: #000;
+    }
+    .heading{
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px);
+        color: #fff;
+        font-size: 30px;
+    }
+    .image-container a {
+            color: rgb(0, 148, 253);
             text-decoration: none;
             font-size: 2.00em; /* 设置五页字体大小 */
         }
-        img {
-            margin: 10px; /* 上下左右各10px */
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            color: white;
-            padding: 50px;
-            background: rgba(0, 0, 0, 0.5);
-        }
-        body {
-    background-image: url('f534a849e48e648ca6a450e1fafded7.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-    </style>
-</head>
+</style>
 
 <body>
-    <div class="parallax">
-        <video autoplay loop muted>
-            <source src="000.mp4" type="video/mp4">
-            您的浏览器不支持视频播放。
-        </video>
-    </div>
-    <div class="content">
-        <h1>欢迎来到我的网站（点击蓝色字体访问内容）</h1>
-        <p><div class="image-container">
-            <img src="96caa83620a15bc5be9dd8b919e2133.jpg" alt="示例图片">
-            <div class="caption">
-                <a href="http://www.bilibi.com">哲学思考</a>
-            </div>
-            <img src="微信图片_20241103012442.jpg" alt="示例图片">
-            <div class="caption">
+    <div class="shell">
+        <div class="image" style="background-image: url('./1.jpg');"></div>
+        <div class="heading">
+            <h1>白灵档案馆</h1>
+        </div>
+        <div class="text">
+            <h1><div class="caption">
+                <a href="http://www.bilibi.com">哲学思考</a></h1>
+        </div>
+
+        <div class="image" style="background-image: url('./2.jpg');"></div>
+        <div class="heading">
+            <h1></h1>
+        </div>
+        <div class="text">
+            <h1><div class="caption">
                 <a href="http://www.bilibi.com">计算机学</a>
-            </div>
-            <img src="78ef67d3daee97d3fc91dd5819a65f7.jpg" alt="示例图片">
-            <div class="caption">
-                <a href="http://www.bilibi.com">数学讨论</a>
-            </div>
-            <img src="313c659045fe09b0ecdc7e8a123ad13.jpg" alt="示例图片">
-            <div class="caption">
-                <a href="http://www.bilibi.com">物理学讨论</a>
-        </div></p>
+            </h1>
+        </div>
+
+        <div class="image" style="background-image: url('./3.jpg');"></div>
+        <div class="heading">
+            <h1></h1>
+        </div>
+        <div class="text">
+            <h1><div class="caption">
+                <a href="http://www.bilibi.com">数学和物理的讨论</a>
+            </h1>
+        </div>
+
+        <div class="image" style="background-image: url('./4.jpg');"></div>
+        <div class="heading">
+            <h1>ALL of myself.</h1>
+        </div>
     </div>
 </body>
 
+</html>
 </html>
